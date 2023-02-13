@@ -52,7 +52,7 @@ class KPCA:
         # 取得的特征向量是从
         matrix = []
         for index in range(pos, len(sort_indices)):
-            matrix.append(list(featurevector[index]))
+            matrix.append(list(featurevector[sort_indices[index]]))
         # Transformer是self.dim行，m列的矩阵
         self.Transformer = np.array(matrix, dtype="float64")
         self.dim = len(sort_indices) - pos
